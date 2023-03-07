@@ -32,7 +32,8 @@
       }
     ],
     "@typescript-eslint/switch-exhaustiveness-check": 2,
-    "@typescript-eslint/consistent-type-defenitions": ["error", "type"]
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "import/no-extraneous-dependencies": 0
   },
   "root": true
 }
