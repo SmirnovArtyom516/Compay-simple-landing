@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb-typescript",
+    "react-app",
+    "prettier"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "project": true,
+    "tsconfigRootDir": "./"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+    "@typescript-eslint/explicit-function-return-type": [
+      2,
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true,
+        "allowDirectConstAssertionInArrowFunctions": true
+      }
+    ],
+    "@typescript-eslint/switch-exhaustiveness-check": 2,
+    "@typescript-eslint/consistent-type-defenitions": ["error", "type"]
+  },
+  "root": true
+}
