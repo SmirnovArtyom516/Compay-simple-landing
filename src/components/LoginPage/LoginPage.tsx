@@ -14,7 +14,6 @@ function LoginPage({ setUser }: Props): JSX.Element {
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [checked, setChecked] = useState<boolean>(false);
-  console.log(!login, !password, !checked);
   const AuthHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     Users.forEach((el) => {
@@ -48,7 +47,7 @@ function LoginPage({ setUser }: Props): JSX.Element {
                 type="submit"
                 sx={{ borderRadius: '10px' }}
                 variant="contained"
-                disabled={!checked}
+                disabled={!(!!login && !!password && checked)}
               >
                 Войти
               </Button>
