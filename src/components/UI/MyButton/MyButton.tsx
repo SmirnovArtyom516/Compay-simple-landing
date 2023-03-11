@@ -10,7 +10,7 @@ type Props = {
 
 function MyButton({el, setError, answer}: Props): JSX.Element {
 
-  function foo(correct: string | undefined):string {
+  function getColor(correct: string | undefined): 'success' | 'error' | 'primary'  {
     switch (correct) {
       case 'да':
         return "success";
@@ -35,7 +35,7 @@ function MyButton({el, setError, answer}: Props): JSX.Element {
 
 
   return (
-     <Button color={foo(correct)} size="small" variant="contained" onClick={checkAnswerHandler}>{el}</Button>
+     <Button color={getColor(correct)} size="small" variant="contained" onClick={checkAnswerHandler}>{el}</Button>
   )
 }
 
