@@ -4,3 +4,10 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.questionContaiter{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

@@ -20,4 +20,9 @@ export const Users: User[] = [
     password: '123',
     name: 'Адриана',
   },
+  {
+    login: '123',
+    password: '123',
+    name: 'Admin',
+  },
 ];

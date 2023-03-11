@@ -28,11 +28,11 @@ function Test(): JSX.Element {
           </Button>
         </>
       ) : (
-        <>
-          {question.forEach((el) => (
-            <TestCard key={el.question} quiz={el} />
+        <div className={styles.questionContaiter}>
+          {question.map((el, i) => (
+            <TestCard key={el.question} quiz={el} id={i + 1} />
           ))}
-        </>
+          </div>
       )}
     </div>
   );
