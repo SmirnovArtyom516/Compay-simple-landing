@@ -13,11 +13,15 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import type { User } from '../../../api/users';
+
+type Props = {
+  setUser: React.Dispatch<React.SetStateAction<User | undefined>>
+}
 
 const pages = ['О нас', 'Пройти тест', 'Блог'];
-const settings = ['Профиль', 'Выъод'];
 
-function Navbar(): JSX.Element {
+function Navbar({setUser}: Props): JSX.Element {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -113,7 +117,7 @@ function Navbar(): JSX.Element {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            ВТренде
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -151,11 +155,14 @@ function Navbar(): JSX.Element {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Профиль</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography onClick={() => setUser(undefined)} textAlign="center">
+                        Выход
+                    </Typography>
+                </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

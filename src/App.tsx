@@ -14,7 +14,7 @@ function App(): JSX.Element {
   console.log(user);
   return (
     <>
-      {user && <Navbar />}
+      {user && <Navbar setUser={setUser}/>}
       <Routes>
         <Route element={<ProtectedRoute redirect="/main" isAllowed={!user} />}>
           <Route path="/login" element={<LoginPage setUser={setUser} />} />

@@ -1,4 +1,5 @@
 export type Quiz = {
+  id?: number
   question: string;
   answer: string;
   description?: string;
@@ -11,6 +12,7 @@ export type Quiz = {
 
 export const Quastions: Quiz[] = [
   {
+    id: 1,
     question: 'Какие минеральные фильтры используются в кремах от загара?',
     answer: 'zinc oxide и titanium dioxide',
     a: 'zinc oxide и titanium dioxide',
@@ -19,6 +21,7 @@ export const Quastions: Quiz[] = [
     d: 'octisalate, octocrylene, homosalate',
   },
   {
+    id: 2,
     question:
       'Название какой известной косметической компании произошло от сочетания женского имени и слова «вазелин»?',
     answer: 'Maybelline',
@@ -28,6 +31,7 @@ export const Quastions: Quiz[] = [
     d: 'Nyx',
   },
   {
+    id: 3,
     question: 'Где впервые использовали помаду?',
     answer: 'В Месопотамии',
     a: 'В дрвенем Китае',
@@ -36,6 +40,7 @@ export const Quastions: Quiz[] = [
     d: 'В древнем египте',
   },
   {
+    id: 4,
     question: 'В какой стране был изобретен лак для ногтей?',
     answer: 'В Китае',
     a: 'В Италии',
@@ -44,6 +49,7 @@ export const Quastions: Quiz[] = [
     d: 'В Китае',
   },
   {
+    id: 5, 
     question:
       'Какая известная косметическая компания была основана французским химиком Эженом Шуллером в 1909 году?',
     answer: `L'Oreal`,
@@ -53,6 +59,7 @@ export const Quastions: Quiz[] = [
     d: `L'Oreal`,
   },
   {
+    id: 6,
     question: 'В какой стране был изобретен лак для ногтей?',
     img: 'https://sun9-79.userapi.com/impg/VccuiwkTy67XI-PKsVFRRj0v-FqX4ypPaHMHtQ/z31Ilb89d8c.jpg?size=714x745&quality=95&sign=8480f5fc0223c08a91c9d5a8ab6645c7&type=album',
     answer: 'В Китае',
