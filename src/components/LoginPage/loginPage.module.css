@@ -1,8 +1,17 @@
-.main {
+.loginLanding {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgb(58, 112, 165);
-  box-shadow: 0 -200px 100px -120px rgb(163, 137, 229) inset;
   animation: background 15s infinite alternate;
+  box-shadow: 0 -200px 100px -120px rgb(163, 137, 229) inset;
+  height: 100vh;
+}
+
+.main {
+  border-radius: 100px;
+  height: 70vh;
+  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -16,8 +25,11 @@
 }
 
 .mainText {
+  letter-spacing: 4px;
+  font-family: Impact, fantasy;
+  color: purple;
   position: absolute;
-  top: 85px;
+  top: 233px;
 }
 
 .enterButton {

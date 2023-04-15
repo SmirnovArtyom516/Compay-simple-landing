@@ -30,32 +30,38 @@ function LoginPage({ setUser }: Props): JSX.Element {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.loginContainer}>
-        <h1 className={styles.mainText}>ВТренде</h1>
-        <form onSubmit={AuthHandler}>
-          <div className={styles.authInput}>
-            <Input placeholder="Логин" value={login} onChange={loginHandler} />
-            <Input placeholder="Пароль" value={password} onChange={passwordHandler} />
-            {error && <p>{error}</p>}
-            <div>
-              <Checkbox checked={checked} onClick={() => setChecked(!checked)} />
-              <span>пользовательское соглашение</span>
+    <div className={styles.loginLanding}>
+      <div className={styles.main}>
+        <div className={styles.loginContainer}>
+          <h1 className={styles.mainText}>ВТренде</h1>
+          <form onSubmit={AuthHandler}>
+            <div className={styles.authInput}>
+              <Input placeholder="Логин" value={login} onChange={loginHandler} />
+              <Input placeholder="Пароль" value={password} onChange={passwordHandler} />
+              {error && <p style={{ color: 'red' }}>{error}</p>}
+              <div>
+                <Checkbox checked={checked} onClick={() => setChecked(!checked)} />
+                <span>пользовательское соглашение</span>
+              </div>
+              <div className={styles.enterButton}>
+                <Button
+                  type="submit"
+                  sx={{ borderRadius: '10px' }}
+                  variant="contained"
+                  disabled={!(!!login && !!password && checked)}
+                >
+                  Войти
+                </Button>
+                <a style={{ textDecoration: 'none' }} href="/">
+                  Проблемы со входом?
+                </a>
+                <a style={{ textDecoration: 'none' }} href="/">
+                  Техническая поддержка
+                </a>
+              </div>
             </div>
-            <div className={styles.enterButton}>
-              <Button
-                type="submit"
-                sx={{ borderRadius: '10px' }}
-                variant="contained"
-                disabled={!(!!login && !!password && checked)}
-              >
-                Войти
-              </Button>
-              <a href="/">Проблемы со входом?</a>
-              <a href="/">Техническая поддержка</a>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
