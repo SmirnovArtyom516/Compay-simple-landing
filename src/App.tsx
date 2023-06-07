@@ -8,9 +8,12 @@ import ProtectedRoute from './components/HOCs/ProtectRoute';
 import Test from './components/Test/Test';
 import Blog from './components/Blog/Blog';
 import Info from './components/Info/Info';
+import ResultPage from './components/ResultPage/ResultPage';
 
 function App(): JSX.Element {
   const [user, setUser] = useState<User | undefined>();
+  const [score, setScore] = useState(0)
+  console.log(score, 'SCORE')
   console.log(user);
   return (
     <>
@@ -21,9 +24,10 @@ function App(): JSX.Element {
         </Route>
         <Route element={<ProtectedRoute redirect="/login" isAllowed={!!user} />}>
           <Route path="/main" element={<MainPage />} />
-          <Route path="/Пройти тест" element={<Test />} />
+          <Route path="/Пройти тест" element={<Test score={score} setScore={setScore} />} />
           <Route path="/Блог" element={<Blog />} />
           <Route path="/О нас" element={<Info />} />
+          <Route path='/Result' element={<ResultPage score={score} />}/>
         </Route>
       </Routes>
     </>

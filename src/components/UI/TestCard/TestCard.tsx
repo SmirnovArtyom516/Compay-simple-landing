@@ -11,9 +11,10 @@ import type { Quiz } from '../../../api/quiz';
 type Props = { 
   quiz: Quiz
   setShowButton: React.Dispatch<React.SetStateAction<boolean>>
+  setScore:React.Dispatch<React.SetStateAction<number>>
 }
 
-function TestCard({ quiz, setShowButton }: Props): JSX.Element {
+function TestCard({setScore, quiz, setShowButton }: Props): JSX.Element {
 
   const [error, setError] = React.useState<string>('')
   const [disable, setDisable] = React.useState<boolean>(false)
@@ -42,7 +43,7 @@ function TestCard({ quiz, setShowButton }: Props): JSX.Element {
         </Typography>
       </CardContent>
       <CardActions>
-        {answers.map((el) => <MyButton setDisable={setDisable} disable={disable} el={el} setError={setError} answer={quiz.answer} setShowButton={setShowButton}/>)}
+        {answers.map((el) => <MyButton setScore={setScore} setDisable={setDisable} disable={disable} el={el} setError={setError} answer={quiz.answer} setShowButton={setShowButton}/>)}
       </CardActions>
       {error && <div className={styles.errorMessage}>{error}</div>}
     </Card>

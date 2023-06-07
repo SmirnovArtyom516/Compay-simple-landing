@@ -19,7 +19,7 @@ type Props = {
   setUser: React.Dispatch<React.SetStateAction<User | undefined>>
 }
 
-const pages = ['О нас', 'Пройти тест', 'Блог'];
+const pages = ['Пройти тест'];
 
 function Navbar({setUser}: Props): JSX.Element {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

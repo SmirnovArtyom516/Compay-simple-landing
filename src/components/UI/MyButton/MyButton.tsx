@@ -10,9 +10,10 @@ type Props = {
   setShowButton: React.Dispatch<React.SetStateAction<boolean>>
   disable: boolean
   setDisable: React.Dispatch<React.SetStateAction<boolean>>
+  setScore: React.Dispatch<React.SetStateAction<number>>
 }
 
-function MyButton({el, setError, answer, setShowButton, disable, setDisable}: Props): JSX.Element {
+function MyButton({setScore, el, setError, answer, setShowButton, disable, setDisable}: Props): JSX.Element {
 
   const [touched, setTouched] = useState<boolean>(true)
 
@@ -37,7 +38,8 @@ function MyButton({el, setError, answer, setShowButton, disable, setDisable}: Pr
       setShowButton(false)
       setTouched(false)
       setDisable(true)
-      
+      // eslint-disable-next-line no-return-assign
+      setScore((prev) => prev += 1)
     }else{
       setCorrect('нет');
       setError('Ответ неправильный')
