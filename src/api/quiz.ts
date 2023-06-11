@@ -58,14 +58,4 @@ export const Quastions: Quiz[] = [
     c: 'Amway',
     d: `L'Oreal`,
   },
-  {
-    id: 6,
-    question: 'В какой стране был изобретен лак для ногтей?',
-    img: 'https://sun9-79.userapi.com/impg/VccuiwkTy67XI-PKsVFRRj0v-FqX4ypPaHMHtQ/z31Ilb89d8c.jpg?size=714x745&quality=95&sign=8480f5fc0223c08a91c9d5a8ab6645c7&type=album',
-    answer: 'В Китае',
-    a: 'В Италии',
-    b: 'В Японии',
-    c: 'Во Франции',
-    d: 'В Китае',
-  },
 ];

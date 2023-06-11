@@ -45,7 +45,7 @@ function TestCard({setScore, quiz, setShowButton }: Props): JSX.Element {
       <CardActions>
         {answers.map((el) => <MyButton setScore={setScore} setDisable={setDisable} disable={disable} el={el} setError={setError} answer={quiz.answer} setShowButton={setShowButton}/>)}
       </CardActions>
-      {error && <div className={styles.errorMessage}>{error}</div>}
+      {error && <div style={{fontFamily: "Open Sans"}} className={styles.errorMessage}>{error}</div>}
     </Card>
   );
 }

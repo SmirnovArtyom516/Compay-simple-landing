@@ -41,7 +41,7 @@ function LoginPage({ setUser }: Props): JSX.Element {
           <form onSubmit={AuthHandler}>
             <div className={styles.authInput}>
               <Input placeholder="Логин" value={login} onChange={loginHandler} />
-              <Input placeholder="Пароль" value={password} onChange={passwordHandler} />
+              <Input placeholder="Пароль" type='password' value={password} onChange={passwordHandler} />
               {error && 
                 <div style={{backgroundColor: '#f9dddd', paddingLeft: "25px"}}>
                   <p style={{ color: 'red', fontFamily: 'Open Sans', fontSize: '15px' }}>{error}</p>

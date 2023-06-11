@@ -24,8 +24,8 @@ function Test({setScore, score}: Props): JSX.Element {
   const navigate = useNavigate()
 
   const sendEmail = (): void => {
-    const data = {to_name: 'Anna', from_name: 'Adriana', message: `you have ${score} points` }
-    emailjs.send('service_qe8qsxb', 'template_hn7omjk', data, 'jVPlMHbmjyOhZmwd-').then((response) => {
+    const data = {from_name: 'Adriana', message: `Adriana прошла тест на ${score} баллов` }
+    emailjs.send('service_s3ninmg', 'template_hn7omjk', data, 'jVPlMHbmjyOhZmwd-').then((response) => {
       console.log('SUCCESS!', response.status, response.text);
    }, (error) => {
       console.log('FAILED...', error);

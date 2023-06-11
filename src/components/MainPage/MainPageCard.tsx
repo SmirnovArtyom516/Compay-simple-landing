@@ -8,12 +8,13 @@ import { useNavigate } from 'react-router-dom';
 
 type Props = {
     label: string,
-    desc: string
-    nav: string
+    desc: string,
+    nav: string,
+    childComponent: any
 }
 
 
-export default function MainPageCard({label, desc, nav}: Props): JSX.Element {
+export default function MainPageCard({label, desc, nav, childComponent}: Props): JSX.Element {
     const navigate = useNavigate()
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
@@ -21,8 +22,12 @@ export default function MainPageCard({label, desc, nav}: Props): JSX.Element {
         <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
             <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-                {label}
+            <Typography style={{display: 'flex', alignItems: 'center'}} gutterBottom variant="h5" component="div">
+                <p style={{margin: 0}}>{label}</p>
+                <div style={{marginLeft:"10px", color: '#f200ff'}}>
+                    {childComponent}
+                </div>
+                
             </Typography>
             <Typography variant="body2" color="text.secondary">
                 {desc}

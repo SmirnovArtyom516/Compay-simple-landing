@@ -7,8 +7,8 @@ type Props = {
 
 export default function ResultPage({score}: Props): JSX.Element {
   return (
-    <div style={{display: 'flex', justifyContent: 'center'}}>
-        <h3 style={{fontFamily: 'Open Sans'}}>Ваши результаты:</h3>
+    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+        <h3 style={{fontFamily: 'Open Sans'}}>Ваши результаты направлены на почту:</h3>
         <div 
         style={{width: '500px', display: 'flex', justifyContent: 'center'}}
         >

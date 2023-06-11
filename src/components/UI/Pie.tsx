@@ -16,14 +16,14 @@ export default function MyPie({score}: Props): JSX.Element {
         datasets: [
           {
             label: 'Answers',
-            data: [6-score, score],
+            data: [5-score, score],
             backgroundColor: [
-              'rgba(230, 32, 32, 1)',
-              'rgba(0, 255, 0)',
+              '#DCBCE3',
+              '#FAF2C0',
             ],
             borderColor: [
-              'rgba(230, 32, 32, 1)',
-              'rgba(0, 255, 0)',
+              '#DCBCE3',
+              '#FAF2C0',
             ],
             borderWidth: 1,
           },

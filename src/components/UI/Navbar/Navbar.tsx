@@ -19,7 +19,7 @@ type Props = {
   setUser: React.Dispatch<React.SetStateAction<User | undefined>>
 }
 
-const pages = ['Пройти тест'];
+const pages = [''];
 
 function Navbar({setUser}: Props): JSX.Element {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -41,7 +41,7 @@ function Navbar({setUser}: Props): JSX.Element {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'purple' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#DCBCE3' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -60,7 +60,7 @@ function Navbar({setUser}: Props): JSX.Element {
             }}
           >
             <Link to="/main" style={{ textDecoration: 'none', color: 'white' }}>
-              ВТренде
+              <img src="https://www.podrygka.ru/images/logo.png" alt="" />
             </Link>
           </Typography>
 
@@ -117,7 +117,7 @@ function Navbar({setUser}: Props): JSX.Element {
               textDecoration: 'none',
             }}
           >
-            ВТренде
+            <img src="https://www.podrygka.ru/images/logo.png" alt="" />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -136,7 +136,7 @@ function Navbar({setUser}: Props): JSX.Element {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/100850327?v=4" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -155,9 +155,7 @@ function Navbar({setUser}: Props): JSX.Element {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-                <MenuItem onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">Профиль</Typography>
-                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu} />
                 <MenuItem onClick={handleCloseUserMenu}>
                   <Typography onClick={() => setUser(undefined)} textAlign="center">
                         Выход

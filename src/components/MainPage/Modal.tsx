@@ -32,19 +32,15 @@ export default function Modal({open, setOpen}: Props): JSX.Element {
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              <p style={{fontFamily: 'Open Sans'}}>Понедельник - 9:00 до 22:00</p>
+              <p style={{fontFamily: 'Open Sans'}}>Понедельник - 9:00 до 20:00</p>
               <br />
-              <p style={{fontFamily: 'Open Sans'}}>Вторник - 9:00 до 22:00</p>
+              <p style={{fontFamily: 'Open Sans'}}>Вторник - 9:00 до 20:00</p>
               <br />
-              <p style={{fontFamily: 'Open Sans'}}>Среда - 9:00 до 22:00</p>
+              <p style={{fontFamily: 'Open Sans'}}>Пятница - 9:00 до 20:00</p>
               <br />
-              <p style={{fontFamily: 'Open Sans'}}>Четверг - 9:00 до 22:00</p>
+              <p style={{fontFamily: 'Open Sans'}}>Суббота - 9:00 до 20:00</p>
               <br />
-              <p style={{fontFamily: 'Open Sans'}}>Пятница - 9:00 до 22:00</p>
-              <br />
-              <p style={{fontFamily: 'Open Sans'}}>Суббота - 9:00 до 18:00</p>
-              <br />
-              <p style={{fontFamily: 'Open Sans'}}>Воскресенье - 9:00 до 18:00</p>
+              <p style={{fontFamily: 'Open Sans'}}>Воскресенье - 9:00 до 20:00</p>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
