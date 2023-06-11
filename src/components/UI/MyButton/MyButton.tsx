@@ -38,7 +38,6 @@ function MyButton({setScore, el, setError, answer, setShowButton, disable, setDi
       setShowButton(false)
       setTouched(false)
       setDisable(true)
-      // eslint-disable-next-line no-return-assign
       setScore((prev) => prev += 1)
     }else{
       setCorrect('нет');
