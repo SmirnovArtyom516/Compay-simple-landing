@@ -1,10 +1,11 @@
 import React from 'react';
+import map from '../../utils/8.png'
 
 function Info(): JSX.Element {
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}>
        <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}} >
-         <img src="http://rabotavpodrygke.ru/upload/iblock/fda/8.png" alt="" />
+         <img src={map} alt="" />
        </div>
        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
          <h1 style={{color: 'purple', fontFamily: 'Open Sans'}}>ИСТОРИЯ КОМПАНИИ</h1>
